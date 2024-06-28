@@ -55,3 +55,45 @@
     <p><a href="{{ url('/planets') }}">Back to planets list</a></p>
 </body>
 </html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Planets List</title>
+</head>
+<body>
+    <h1>Planets</h1>
+    <ul>
+        @foreach ($planets as $planet)
+            <li>
+                <h2><a href="{{ url('/planets/' . strtolower($planet['name'])) }}">{{ $planet['name'] }}</a></h2>
+                <p>{{ $planet['description'] }}</p>
+            </li>
+        @endforeach
+    </ul>
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ $planet['name'] }} Details</title>
+</head>
+<body>
+    <h1>{{ $planet['name'] }}</h1>
+    <p>{{ $planet['description'] }}</p>
+    <p><a href="{{ url('/planets') }}">Back to planets list</a></p>
+</body>
+</html>
