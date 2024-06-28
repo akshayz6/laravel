@@ -38,3 +38,20 @@
     </ul>
 </body>
 </html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ $planet['name'] }} Details</title>
+</head>
+<body>
+    <h1>{{ $planet['name'] }}</h1>
+    <p>{{ $planet['description'] }}</p>
+    <p><a href="{{ url('/planets') }}">Back to planets list</a></p>
+</body>
+</html>
